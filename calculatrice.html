@@ -1,1 +1,76 @@
+<html>
+    <head>
+         <meta charset="utf-8">
+        <title>CALCULATRICE</title>
+    </head>
+    <body>
+     <form>
+        <h1>CALCULATRICE ESSAI</h1>
+        <p>
+            <label for="nbre1">nombre1:</label>
+            <input type="number" id="nbre1">
+        </p>
+        <p>
+            <label for="nbre2">nombre2:</label>
+            <input type="number" id="nbre2">
+        </p>
+        <p>
+            <input type="button" id="soumettre" value="addition" onclick="addition()">
+            <input type="button" id="soumettre" value="soustraction" onclick="soustraction()">
+            <input type="button" id="soumettre" value="multiplication" onclick="multiplication()">
+            <input type="button" id="soumettre" value="division" onclick="division()">
+        </p>
+        <div id="divsoust"> 
+        </div>
+        <script>
+            function addition(){
+             var a=parseFloat(document.getElementById("nbre1").value);
+             var b=parseFloat(document.getElementById("nbre2").value);
+             var affiche=document.getElementById("disoust");
+             var addition=a+b;
+             var message="l'addition donne "+addition;
+            affiche.innerHTML=message;
+            }
+            function multiplication(){
+             var a=parseFloat(document.getElementById("nbre1").value);
+             var b=parseFloat(document.getElementById("nbre2").value);
+             var affiche=document.getElementById("divsoust");
+             var mutiplication=a*b;
+             var message="la mutiplication donne "+mutiplication;
+            affiche.innerHTML=message;
+            }
+        </script>
+        <script>
+            function soustraction(){
+                var a=parseFloat(document.getElementById("nbre1").value);
+                var b=parseFloat(document.getElementById("nbre2").value);
+                var affiche=document.getElementById("divsoust");
+                var soust1=a-b;
+                var soust2=b-a;
+                var message1="la soustraction de nombre1 par nombre2 est "+ soust1;
+                var message2="la soustraction de nombre2 par nombre1 est "+ soust2;
+                var message=message1+ " et "+message2;
+            affiche.innerHTML=message;
+            }
+            function division(){
+                var a=parseFloat(document.getElementById("nbre1").value);
+                var b=parseFloat(document.getElementById("nbre2").value);
+                var affiche=document.getElementById("divsoust");
+                var div1=a/b;
+                var div2=b/a;
+                var message1="la division de nombre1 par nombre2 est "+ div1;
+                var message2="la division de nombre2 par nombre1 est "+ div2;
+                var message=message1+ " et "+message2;
+            affiche.innerHTML=message;
+            }
+        </script>
+     </form>
+     </body>
+     </html>
+    
+    </body>
+</html>
+
+
+
 
