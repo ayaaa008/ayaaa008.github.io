@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>FORMULAIRE AFFICHEUR DE NOM</title>
+    </head>
+    <body><form>
+        <h1> FORMULAIRE AFFICHEUR DE NOM</h1>
+      <label for="nom1">PRENOM:</label>
+        <input id="nom1" type="text">
+        <br><label for="nom2">NOM DU MILIEU:</label>
+        <input id="nom2" type="text">
+       <br> <label for="nom3">NOM DE FAMILLE:</label>
+        <input id="nom3" type="text"><br>
+        <input type="button" id="initiales" value="initiales" onclick="initiales()">
+        <input type="button" id="nomcomplet" value="nom complet" onclick="nomcomplet()">
+         <input type="button" id="nomutilisateur" value="nomutilisateur" onclick="nomutilisateur()">
+         <div id="divaffiche">
+         </div>
+         <script>
+             function initiales(){
+                var prenom=document.getElementById("nom1").value;
+                var nom=document.getElementById("nom2").value;
+                var nomfamille=document.getElementById("nom3").value;
+                var letter1nom=nom[0].toLowerCase();
+                var letter1prenom=prenom[0].toLowerCase();
+                var letter1nomfamille=nomfamille[0].toLowerCase();
+                var affiche=document.getElementById("divaffiche");
+                var initiales=letter1prenom+letter1nom+letter1nomfamille;
+                var message="initiales: "+ initiales;
+                affiche.innerHTML=message;
+                                        }
+             function nomcomplet(){
+                 var prenom=document.getElementById("nom1").value;
+                 var nom=document.getElementById("nom2").value;
+                 var nomfamille=document.getElementById("nom3").value;
+                 var affiche=document.getElementById("divaffiche");
+                 var nomcomplet=prenom+" "+nom+" "+nomfamille;
+                 var message= "nom complet: "+nomcomplet;
+                 affiche.innerHTML=message;
+             }
+function nomutilisateur(){
+    var prenom=document.getElementById("nom1").value;
+    var nom=document.getElementById("nom2").value;
+var nomfamille=document.getElementById("nom3").value;
+var letter1nom=nom[0].toLowerCase();
+var letter1prenom=prenom[0].toLowerCase();
+var letter1nomfamille=nomfamille[0].toLowerCase();
+var affiche=document.getElementById("divaffiche");
+var nomilisateur=letter1prenom+letter1nom+nomfamille;
+var message= "nom d'utilisateur: " +nomilisateur;
+affiche.innerHTML=message;
+}
+ </form>
+
+
+         </script>
+       </form> 
+    </body>
+</html>
