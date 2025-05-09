@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <title>FORMULAIRE AFFICHEUR DE NOM</title>
     </head>
     <body><form>
@@ -10,9 +11,9 @@
         <input id="nom2" type="text">
        <br> <label for="nom3">NOM DE FAMILLE:</label>
         <input id="nom3" type="text"><br>
-        <input type="button" id="initiales" value="initiales" onclick="initiales()">
-        <input type="button" id="nomcomplet" value="nom complet" onclick="nomcomplet()">
-         <input type="button" id="nomutilisateur" value="nomutilisateur" onclick="nomutilisateur()">
+        <input type="button" id="soumettre" value="initiales" onclick="initiales()">
+        <input type="button" id="soumettre" value="nom complet" onclick="nomcomplet()">
+         <input type="button" id="soumettre" value="nomutilisateur" onclick="nomutilisateur()">
          <div id="divaffiche">
          </div>
          <script>
@@ -45,11 +46,10 @@ var letter1nom=nom[0].toLowerCase();
 var letter1prenom=prenom[0].toLowerCase();
 var letter1nomfamille=nomfamille[0].toLowerCase();
 var affiche=document.getElementById("divaffiche");
-var nomilisateur=letter1prenom+letter1nom+nomfamille;
-var message= "nom d'utilisateur: " +nomilisateur;
+var nomutilisateur=letter1prenom+letter1nom+nomfamille;
+var message= "nom d'utilisateur: "+nomutilisateur;
 affiche.innerHTML=message;
 }
- </form>
 
 
          </script>
