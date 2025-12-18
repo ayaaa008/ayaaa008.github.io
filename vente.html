@@ -1,0 +1,210 @@
+<html>
+    <head><title>commerce</title></head>
+    <!--ajout image en fond d,ecran a defaut de css -->
+    <style>
+        body{
+        
+            background-image:url("https://img.freepik.com/vecteurs-libre/fond-aquarelle-rose-peint-main-detaille_1048-17039.jpg?semt=ais_hybrid&w=740");
+        }
+    </style>
+    
+    <body>
+       
+        <h1 style="color:violet; font-size:220px" align="center"><u>BEAUTY</u></h1>
+        
+        <br><br><br>
+       
+        <table border="6" align="center">
+            
+            <th>
+              <!--importation de photos pour les items dans chaque cellules d'un tableau de 3 cellules -->
+
+            <img src="https://adopt.mu/cdn/shop/products/life_care_monoiblanc_monoioil_3701429813550_1_1_533x.jpg?v=1662467752" width="500px">
+            <td><img src="https://i.pinimg.com/736x/fe/8e/44/fe8e44042076e73a56f8896926f661a8.jpg" width="500px"></td>
+            <td><img src="https://m.media-amazon.com/images/I/81sH2Cdi2tL.jpg"width="500px"></td>
+            </th>
+            
+            <tr>
+               <td>Nom:monoi blanc<br>
+                prix unitaire:15.99$<br>
+                description: Eau de parfum raffiné fabriquer en france.<br><br>
+                
+                <form><!-- ouverture dun formulaire pour le choix de la quantité du produit 1-->
+
+                <label for="selqte1">quantité:</label>
+                    
+                    <select id="selqte1">
+                       <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br><br>
+    <!-- ouverture du boutton commander du produit 1-->
+    <input type="button" id="Soumettre" onclick="calcul1()"  value="commader">
+     <!-- ouverture d'une section d'affichage du produit 1-->
+    <div id="divAffiche">
+    </div>
+    <!-- fonction qui calcul la somme a depanser du produit demander-->
+<script> 
+       function calcul1(){
+      var affiche = document.getElementById("divAffiche");
+      var qte = document.getElementById("selqte1").value;
+      var prix = qte * 15.99;
+
+      var message="votre commande vous coutera:"+prix+"$"
+      affiche.innerHTML = message;
+
+      }
+    </script>
+   
+    </form>
+                </td>
+                 <td>Nom:robe shein<br>
+                prix unitaire:25.75$<br>
+                description:Pure coton fabriqué en chine offrant confort protection.<br><br>
+                <form><!-- ouverture dun formulaire pour le choix de la quantité du produit 2-->
+                <label for="selqte2">quantité:</label>
+                    <select id="selqte2">
+                       <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br><br>    <!-- ouverture du boutton commander du produit 2-->
+
+    <input type="button" id="Soumettre" onclick="calcul2()"  value="commader">
+        <!-- ouverture d'une section d'affichage du produit 2-->
+
+    <div id="divAffiche2">
+    </div>
+        <!-- fonction qui calcul la somme a depanser du produit demander-->
+
+<script>
+       function calcul2(){
+      var affiche = document.getElementById("divAffiche2");
+      var qte = document.getElementById("selqte2").value;
+      var prix = qte * 25.75;
+
+      var message="votre commande vous coutera:"+prix+"$"
+      affiche.innerHTML = message;
+
+      }
+    </script>
+    </form>
+                </td>
+                 <td>Nom:pack maquillage<br>
+                prix unitaire:50.25$<br>
+                description:Materiel doux et protecteur pour la peau.Assurant confort et bien être,examiné par les dermatologues.En cas d'irritation veuillez consulter un medecin.<br><br>
+               
+                <form>
+                <label for="selqte3">quantité:</label>
+                    <select id="selqte3">
+                      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br><br>
+    <input type="button" id="Soumettre" onclick="calcul3()"  value="commader">
+    <div id="divAffiche3">
+    </div>
+        <!-- fonction qui calcul la somme a depanser du produit demander-->
+
+<script>
+       function calcul3(){
+      var affiche = document.getElementById("divAffiche3");
+      var qte = document.getElementById("selqte3").value;
+      var prix = qte * 50.25;
+
+      var message="votre commande vous coutera:"+prix+"$"
+      affiche.innerHTML = message;
+
+      }
+    </script>
+    </form>
+                </td>
+            </tr>
+            
+        </table><br>
+         <form><!--creation d'un boutton qui permet d'afficher le recu-->
+                    <input type="button" id="Soumettre" onclick="recu()"  value="Effectuer l'achat">
+                    <div id="divAffiche5">
+    </div>
+                    <script>
+                      function recu(){
+                        var affiche = document.getElementById("divAffiche5");
+                        var qte3 = document.getElementById("selqte3").value;
+                        var prix3 = qte3 * 50.25;
+                       var qte2 = document.getElementById("selqte2").value;
+                        var prix2 = qte2 * 25.75;
+                         var qte1 = document.getElementById("selqte1").value;
+                         var prix1 = qte1 * 15.99;
+                         //calcul de la somme sans taxes
+                          var somme=prix1+prix2+prix3;
+                          if (somme<=100){
+                              //calcul de la somme avec taxes
+                            var total=(somme*0.13)+somme;
+                          // prendre deux chiffre apres la virgule dans le total
+
+                            alert("vous serez debité de "+total.toFixed(2)+" $");
+                         var message="<h1><u>RECU</u></h1><h2>ARTICLES</h2> "+qte1 +" monoi blanc:" +prix1+"$<br>" +qte2 + "robe shein:"+prix2+"$<br>"+qte3 + "pack maquillage:"+prix3+"$<br>Sous-total:"+somme+"$<br>taxes:13%<br>total:"+total.toFixed(2)+"$";  
+                            affiche.innerHTML = message;
+                              //cas de rabais
+                          } if (somme>100){
+                            var rabais=somme-(somme*0.1);
+                            var total2=(rabais*0.13)+rabais;
+                            // prendre deux chiffre apres la virgule dans le total2
+                            //https://www.google.com/search?q=arrondir+2+chiffres+apr%C3%A8s+la+virgule+javascript&rlz=1C1GCEU_enCA1047CA1051&oq=comment+prendre+2+chiffres+apres+la+virgule+en+javascr&gs_lcrp=EgZjaHJvbWUqCAgBEAAYFhgeMgYIABBFGDkyCAgBEAAYFhgeMgcIAhAAGO8FMgoIAxAAGKIEGIkFMgoIBBAAGKIEGIkFMgcIBRAAGO8FMgcIBhAAGO8F0gEJMTgxOTlqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&safe=active&ssui=on
+                           alert("vous serez debité de "+total2.toFixed(2)+" $ car vous avez eu un rabais de 10%")
+                           var message="<h1><u>RECU</u></h1><h2>ARTICLES</h2> " +qte1 +" monoi blanc:" +prix1+"$<br>" +qte2 + "robe shein:"+prix2+"$<br>"+qte3 + "pack maquillage:"+prix3+"$<br>Sous-total:"+somme+"$<br>Sous-total aprés rabais:"+rabais+"$<br>taxes:13%<br>total:"+total2.toFixed(2)+"$";
+                  
+                           affiche.innerHTML = message;   }
+                           if(somme==0){
+                             alert("veuillez passer votre commande ou entrer une quantité");
+                           }
+                          
+
+      }  
+                    </script>
+                </form>
+        <table><br>
+            <th>
+                <form><!--creation d'un boutton qui permet d'afficher les instructions-->
+                    <input type="button" id="Soumettre" onclick="aide()"  value="voulez vous de l'aide ?">
+                    <script>
+                      function aide(){
+                        var affiche = document.getElementById("divAffiche4");
+      var message="<b><h6>BEAUTY</h6></b>est une entreprise de vente en ligne dont les principales cibles sont les femmes.<br>Nous offrons des produits cosmetiques , des lotions corporelles et des vêtements. Le but premier est de pouvoir faire ses achats en toute securité.<br>pour chaque articles ,on a son nom,la description du produit,le prix unitaire qui est le prix d\'un seul produit ensuite la possibilitée limiteé de choisir le nombre de produit;il n'y a que 10 produits par articles.<br>le bouton commander vous permet de passer votre commande puis de voir le totel de cette commande sans taxes.lorsque la somme de vos achats est superieur a 100$ sans taxes ,vous avez droit a un rabais de 10%<br><br><h4><b> PASSEZ UNE BELLE JOUNÉE!!</b></h4>"
+      affiche.innerHTML = message;
+
+      }  
+                    </script>
+                </form>
+            </th>
+           <tr><td> <div id="divAffiche4">
+    </div></td></tr>
+        </table>
+    </body>
+</html>
+
+
+
