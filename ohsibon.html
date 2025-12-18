@@ -1,0 +1,131 @@
+<html>
+    <head><title>Gestion</title></head>
+    <!--ajout image en fond d,ecran a defaut de css -->
+    <style>
+        body{
+        
+            background-image:url("https://img.freepik.com/vecteurs-libre/fond-aquarelle-rose-peint-main-detaille_1048-17039.jpg?semt=ais_hybrid&w=740");
+        }
+    </style>
+    
+    <body>
+       
+        <h1 style="color:violet; font-size:220px" align="center"><u>Ohsibon</u></h1>
+        
+        <br><br><br>
+       
+        <table border="6" align="center">
+            
+            <th>
+              <!--importation de photos pour les items dans chaque cellules d'un tableau de 3 cellules -->
+
+            <img src="https://share.google/8fGWuc69J1xXzR1uo" width="500px">
+            </th>
+            
+            <tr>
+               <td><p>Ohsibon est une jeune entreprise d’acériculture productrice de produits innovants dérivés de l’érable fondée en 2019.</p><br>
+                Nous avons hérité de 50 acres de forêt d’érable et nous tenons à maintenir les valeurs d’origine de l’entreprise familiale qui sont :<br>
+                <p align="center">SOLIDARITÉ, LOYAUTÉ, FIERTÉ ET ENGAGEMENT</p><br>
+                Nous avons réussi à augmenter de façon constante notre clientèle, et nous avons reçu d’excellents commentaires sur notre gamme de produits. Nous aimerions nous positionner comme entreprise innovante dans le secteur des produits de l’érable. La concurrence principale provient des petits producteurs du Québec qui ont une grosse part du marché en lien avec les produits de l’érable.<br>
+                
+                <form><!-- ouverture dun formulaire pour le choix de la quantité du produit 1-->
+
+                <label for="selqte1">Faisons plaisir aux curieux : </label>
+                    
+                    <select id="selqte1">
+                       <option value="Vous n'avez rien choisi ; réessayez "> Dérouler le menu puis faites le choix de l'information qui vous semble la plus interessante :) Ensuite cliquez sur ok  </option>
+      <option value="Produire et créer des produits à base d’érable innovants et de qualité supérieure.">Mission</option>
+      <option value="Devenir le premier producteur de produits à base d’érable en Ontario."> Valeur</option>
+    </select><br><br>
+    <!-- ouverture du boutton commander du produit 1-->
+    <input type="button" id="Soumettre" onclick="calcul1()"  value="Je veux en savoir plus ">
+     <!-- ouverture d'une section d'affichage du produit 1-->
+    <div id="divAffiche">
+    </div>
+    <!-- fonction qui calcul la somme a depanser du produit demander-->
+<script> 
+       function calcul1(){
+      var affiche = document.getElementById("divAffiche");
+      var qte = document.getElementById("selqte1").value;
+      var message=qte;
+      affiche.innerHTML = message;
+
+      }
+    </script>
+   
+    </form>
+    </table>
+    <h4 style="color:violet; font-size:20px" ><u><p>Analyse des FFPM :Forces - Faiblesses - Possibilités - Ménaces</p></u></h4>
+        
+        <br><br><br>
+       
+        <table border="3" >
+            
+            <th>
+              <!--importation de photos pour les items dans chaque cellules d'un tableau de 3 cellules -->
+<p> Forces</p><br>
+<td><p>Possède 50 acres de forêts d'érables; des valeurs fortes(solidarité,loyauté,fierté et engagement);équipe diversifiée; ils sont innovants et proposent de nouveaux produits.</p><br>
+            
+            </th>
+            
+            <tr>
+             <td><p><b>Faiblesses</b></p><br></td>   
+             <td><p>L’entreprise est nouvelle(2019) donc à des concurrents déjà établis depuis longtemps; déficit d’argent pour le financement des projets.</p></td> 
+            </tr>
+            <tr>
+             <td><p><b>Possibilités</b></p><br></td>   
+             <td><p><br><br>Production d’une gamme de produits alimentaires et d’une  nouvelle gamme de produits de corps à base d’érable; faire des partenariats pour des investissements; faire jouer la diversité pour augmenter l'éthique de l’entreprise et la faire valoir(marketing).</p></td> 
+            </tr>
+            <tr>
+             <td><p><b>Ménaces</b></p><br></td>   
+             <td>Les petits producteurs du Québec, économie en défaillance.</td> 
+            </tr>
+            <tr>
+             <p><b>La nouvelle direction d’Ohsibon vise à diversifier ses activités en lançant une gamme de soins du corps à base d’érable, tout en capitalisant sur son expertise et ses valeurs fortes. L’entreprise cherche à se distinguer sur le marché des produits naturels, à renforcer sa compétitivité grâce à l’innovation et à la diversité, et à soutenir sa croissance par des partenariats et financements externes. Cette orientation inclut également une gestion collaborative favorisant l’adaptation au changement et l’engagement des employés.
+</b></p><br>Ceci est un tableau des FFPM pour mieux se réperer :<br>
+             
+            </tr>
+                
+            
+        </table><br>
+        <table><th></th>
+            <td>
+        <form>
+    <!-- ouverture du boutton commander du produit 1-->
+    <input type="button" id="Soumettre" onclick="calcul2()"  value="Parlons du projet d'expansion: cliquez ici pour en savoir plus">
+     <!-- ouverture d'une section d'affichage du produit 1-->
+    <div id="divAffiche1">
+    </div>
+    <!-- fonction qui calcul la somme a depanser du produit demander-->
+<script> 
+       function calcul2(){
+      var affiche = document.getElementById("divAffiche1");
+      var message="Oui, nous sommes en quête de développement et nous nous devons de prendre en compte les resultats de l'analyse des FFPM.<br><p>L’entreprise s’ouvre donc à de nouvelles possibilités( poursuivre la production de notre gamme de produits alimentaires et créer une nouvelle gamme de produits de soins du corps à base d’érable.trouver du financement, augmenter notre production, et revoir l’organisation des tâches.et assurer la rentabilité de nos investissements à moyen terme.</p>";
+      affiche.innerHTML = message;
+
+      }
+    </script>
+   </form></td>
+   <td><form>
+    <!-- ouverture du boutton commander du produit 1-->
+    <input type="button" id="Soumettre" onclick="calcul3()"  value="Les objectifs strategiques : cliquez ici pour en savoir plus">
+     <!-- ouverture d'une section d'affichage du produit 1-->
+    <div id="divAffiche2">
+    </div>
+<script> 
+       function calcul3(){
+      var affiche = document.getElementById("divAffiche2");
+      var message="<p><h4>-Obtenir des financements externes</h4></p><p><h4>- Développer et lancer une nouvelle gamme de produits</h4></p>Ces objectifs sont directement liés aux besoins identifiés dans le projet d’expansion : diversification des produits, sécurisation du financement et amélioration de la compétitivité. Ils sont formulés selon la méthode SMART, ce qui permet à Ohsibon de mesurer, contrôler et atteindre ces buts de façon concrète et réaliste.<br>Pour mieux comprendre ces objectifs, cliquez sur En savoir plus sur les objectifs strategiques.<br>Allez y.C'est juste en bas de la page :)" ;
+      affiche.innerHTML = message;
+  }
+    </script>
+   </form></td>
+    
+     </table>
+        
+         
+    </body>
+</html>
+
+
+
