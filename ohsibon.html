@@ -293,6 +293,24 @@
     document.getElementById("image3").addEventListener("click", createPost("posts3", 1, content3));
   </script>
      </table>
+        <table><br>
+            <th>
+                <form><!--creation d'un boutton qui permet d'afficher les instructions-->
+                    <input type="button" id="Soumettre" onclick="aide()"  value="Explication mieux detaillée des objectifs stratégiques">
+                    <script>
+                      function aide(){
+                        var affiche = document.getElementById("divAffiche4");
+var message=" Obtenir des financements externes<br><br>-Spécifique : Rechercher des subventions, partenaires et investisseurs afin de soutenir les projets d’expansion.<br>-Mesurable : Évaluer le succès par le montant total de financement obtenu et le nombre de partenariats conclus.<br>-Atteignable : L’entreprise peut approcher des organismes gouvernementaux et des investisseurs intéressés par l’innovation et les produits naturels.<br>-Réaliste : La disponibilité de programmes de subvention et l’intérêt croissant pour les produits écoresponsables rendent cet objectif pertinent.<br>-Temporel : À atteindre dans les 24 prochains mois.<br><P> Développer et lancer une nouvelle gamme de produits</P><br>-Spécifique : Poursuivre la production de la gamme alimentaire existante et créer une gamme de soins du corps à base d’érable.<br>-Mesurable : Vérifier que la nouvelle gamme comprend au moins deux produits prêts à la commercialisation et suivre le nombre d’unités produites et vendues.<br>-Atteignable : L’entreprise dispose déjà de l’expertise sur les produits à base d’érable et des infrastructures de production pour développer cette nouvelle gamme.<br>-Réaliste : Le marché des produits naturels et écoresponsables est en croissance, et ce projet correspond aux capacités et valeurs de l’entreprise.<br>-Temporel : Lancement prévu dans les 24 prochains mois, en lien avec le plan de financement et le développement des produits."
+      affiche.innerHTML = message;
+
+      }  
+                    </script>
+                </form>
+            </th>
+           <tr><td> <div id="divAffiche4">
+    </div></td></tr>
+        </table>
+
          
     </body>
 </html>
