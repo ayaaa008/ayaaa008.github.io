@@ -1,5 +1,130 @@
 <html>
-    <head><title>Gestion</title></head>
+    <head><title>Gestion</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #7a3db8;
+    }
+
+    /* Image cliquable */
+    img {
+      width: 300px;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Conteneur des posts */
+    #posts {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Boîte (post) */
+    .post {
+      background-color: white;
+      width: 70%;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    .post h3 {
+      margin-top: 0;
+      color: #5a2d82;
+    }
+
+    .post button {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .post button:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- IMAGE -->
+  <html>
+<head>
+  <title>Gestion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 { color: #7a3db8; }
+
+    /* Images cliquables */
+    img {
+      width: 200px;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      margin: 10px;
+    }
+    img:hover { transform: scale(1.05); }
+
+    /* Zone des posts */
+    .posts {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Boîte post */
+    .post {
+      background-color: white;
+      width: 70%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    .post h3 { margin-top: 0; color: #5a2d82; }
+    .post button {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .post button:hover { background-color: #c9302c; }
+  </style>
+</head>
     <!--ajout image en fond d,ecran a defaut de css -->
     <style>
         body{
@@ -88,7 +213,7 @@
             </tr>
                 
             
-        </table><br>
+        </table><br><P><h1><u>Plan d'action</u></h1></P><br>L'entreprise aura besoin d'un plan d'action pour atteindre leurs objectifs.Cliquez sur chaque photo pour voir les initiatives et leurs plans.
         <table><th></th>
             <td>
         <form>
@@ -123,7 +248,47 @@
    </form></td>
     
      </table>
-        
+     <table>
+         <th><!-- Images cliquables -->
+  <img src="https://share.google/62QfyJau914hjBDLh" id="image1" alt="Érable 1"></th>
+  <td><img src="https://share.google/ZSB6lGwAL81D4xaQN" id="image2" alt="Érable 2"></td>
+  <td><img src="https://share.google/62QfyJau914hjBDLh" id="image3" alt="Érable 3"></td>
+
+  <!-- Zones d'affichage -->
+  <div id="posts1" class="posts"></div>
+  <div id="posts2" class="posts"></div>
+  <div id="posts3" class="posts"></div>
+
+  <script>
+    function createPost(zoneId, compteurStart, content) {
+      const zone = document.getElementById(zoneId);
+      
+
+      return function() {
+        const post = document.createElement("div");
+        post.classList.add("post");
+        post.innerHTML = `
+          <p>${content}</p>
+          <p><em>${new Date().toLocaleString()}</em></p>
+          <button>Annuler</button>
+        `;
+        post.querySelector("button").addEventListener("click", () => post.remove());
+        zone.appendChild(post);
+        compteur++;
+      };
+    }
+
+    // Contenu des posts pour chaque image
+    const content1 = "Initiative 1 :Développement et production de la nouvelle gamme de produits de soins du corps,<br>Objectif : Créer et lancer une gamme de soins à base d’érable répondant aux normes de qualité et aux besoins du marché.<br>Actions :<br>-Phase de recherche et développement (formulation, tests de qualité et sécurité).<br>-Préparation et optimisation des installations pour la production de masse.<br>Ressources nécessaires : Laboratoire, équipements de production, matières premières, personnel qualifié.<br>Résultat attendu : Produits prêts pour le marché dans un délai de 24 mois";
+    const content2 = "Initiative 2 :Initiative 2 : Marketing et promotion de la nouvelle gamme<br>Objectif : accroître la notoriété de la marque et stimuler les ventes de la nouvelle gamme.<br>Actions :<br>-Élaborer une campagne marketing multicanal (réseaux sociaux, publicité locale, événements de lancement).<br>-Créer du contenu éducatif sur les bienfaits de l’érable et la naturalité des produits.<br>-Suivre les ventes et ajuster les stratégies marketing selon les résultats.<br>Ressources nécessaires : Équipe marketing, budget publicitaire, supports visuels et numériques.<br>Résultat attendu : Augmentation mesurable de la notoriété et des ventes dans les 12 à 24 mois.";
+    const content3 = "Initiative 3 : Bien-être du personnel et gestion du changement<br>Objectif : Minimiser la résistance au changement et assurer l’engagement des employés lors de l’expansion.<br>Actions :<br><br>-Organiser des séances d’information et de formation sur les nouvelles tâches, produits et processus.<br>-Mettre en place des outils de communication interne (réunions, newsletters, forums d’échanges).<br>-Proposer des mesures pour le bien-être du personnel : flexibilité des horaires, reconnaissance des efforts, mentorat personnalisé (Paco) et approche participative (Justine).<br>-Prendre en compte les différentes personnalités et générations pour adapter la communication et le soutien (ex. Élyse et Elizabeth peuvent recevoir plus de soutien pour s’adapter aux changements).<br>Ressources nécessaires : Encadrement RH(ressources humaines), budget pour formations et activités de bien-être, outils de communication interne.<br>Résultat attendu : Personnel engagé, résistance minimale au changement et transition fluide vers la nouvelle organisation et la production.";
+
+    // Liaison des images à leurs zones respectives
+    document.getElementById("image1").addEventListener("click", createPost("posts1", 1, content1));
+    document.getElementById("image2").addEventListener("click", createPost("posts2", 1, content2));
+    document.getElementById("image3").addEventListener("click", createPost("posts3", 1, content3));
+  </script>
+     </table>
          
     </body>
 </html>
